@@ -16,13 +16,13 @@ public class MySQLConnection {
 
             // Try-with-resources to auto-close connection
             try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/employeemanagement","root","Jeeva@#638529")) {
-                System.out.println("✅ Connected to MySQL database successfully!");
+                System.out.println("Connected to MySQL database successfully!");
             }
         } catch (ClassNotFoundException e) {
-            System.out.println("❌ MySQL JDBC Driver not found!");
+            System.out.println(" MySQL JDBC Driver not found!");
             e.printStackTrace();
         } catch (SQLException e) {
-            System.out.println("❌ Failed to connect to MySQL!");
+            System.out.println(" Failed to connect to MySQL!");
             e.printStackTrace();
         }
     }
